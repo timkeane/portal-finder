@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+ 	<title>CAU Finder</title>
+ 	<style>
+		body, body * {
+			font-family: 'Arial';
+			font-size: 16px;
+		}
+		iframe {
+			display: block;
+			margin-top: 10px;
+ 			width: 500px;
+ 			height: 500px;
+ 			border: none;
+ 		}
+ 	</style>
+ 	<script>
+		function mapClicked(data){
+ 			console.info(data);
+ 		};
+ 	</script>
+</head>
+<body>
+	Precinct <input id="input" value="101">
+	<button onclick="map.src = 'data/iframe.html?id=' + input.value;return false;">Find</button>
+	<iframe id="map"></iframe>
+</body>
+</html>
